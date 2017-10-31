@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pw.androidthanatos.router">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity android:name=".DispatcherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http" android:host="www.waws.top"/>
+                <data android:scheme="https" android:host="www.waws.top"/>
+                <data android:scheme="router" android:host="www.waws.top"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
