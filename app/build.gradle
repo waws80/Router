@@ -30,6 +30,7 @@ dependencies {
     })
     compile project(':router')
     compile project(':module1')
+    compile project(':annotation')
     annotationProcessor project(':compiler')
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
