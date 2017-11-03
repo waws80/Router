@@ -22,7 +22,7 @@ import pw.androidthanatos.annotation.Modules;
 import pw.androidthanatos.annotation.Path;
 
 
-@SupportedAnnotationTypes({"pw.androidthanatos.annotation.Alias",
+@SupportedAnnotationTypes({"pw.androidthanatos.annotation.Path",
         "pw.androidthanatos.annotation.Module",
         "pw.androidthanatos.annotation.Modules"})
 @SupportedSourceVersion(SourceVersion.RELEASE_7)

@@ -2,7 +2,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 15
@@ -28,10 +28,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
-    //compile 'com.github.mzule.activityrouter:activityrouter:1.2.2'
     testCompile 'junit:junit:4.12'
     compile project(':router')
     annotationProcessor project(':compiler')
-
-    //annotationProcessor 'com.github.mzule.activityrouter:compiler:1.1.7'
 }

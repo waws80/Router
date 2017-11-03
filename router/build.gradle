@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'maven'
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 15
@@ -20,6 +20,16 @@ android {
         }
     }
 }
+uploadArchives{
+    repositories.mavenDeployer{
+        repository(url:"http://localhost:8090/repository/pw.androidthanatos.router/"){
+            authentication(userName:"thanatos",password:"waws19920810")
+        }
+        pom.version = "1.1.0"
+        pom.artifactId = "router"
+        pom.groupId = "pw.androidthanatos"
+    }
+}
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
@@ -28,7 +38,4 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
-    annotationProcessor project(':compiler')
-    compile project(':annotation')
-
 }
